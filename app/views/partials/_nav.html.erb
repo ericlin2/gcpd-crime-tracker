@@ -1,0 +1,18 @@
+<nav id="nav" class="grey darken-1">
+  <div class="container">
+    <ul class="left hide-on-med-and-down">
+      <% if logged_in? %>
+        <li><%= link_to 'Investigations', investigations_path %></li>
+        <li><%= link_to 'Officers', officers_path %></li>
+        <li><%= link_to 'Units', units_path %></li>
+      <% end %>
+    </ul>
+    <ul class="right">
+      <% if logged_in? %>
+        <li><%= link_to 'Logout', logout_path %></li>
+      <% else %>
+        <li><%= link_to 'Login', login_path %></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
